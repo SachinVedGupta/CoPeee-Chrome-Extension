@@ -20,7 +20,8 @@ chrome.commands.onCommand.addListener((c) => {
   case "command2":
     chrome.tabs.create({url: "https://www.google.com/"}, ()=>{});
     chrome.tabs.create({url: "https://www.apple.com/"}, ()=>{});
-    chrome.storage.sync.set({ [2]: { text: "secon", ishid: false } });
+    navigator.clipboard.writeText("hhhhssksmmsms");
+    chrome.storage.sync.set({ [2]: { text: "se", ishid: false } });
     /*chrome.scripting.executeScript({
       target: {tabId: tab.id},
       func: logIt

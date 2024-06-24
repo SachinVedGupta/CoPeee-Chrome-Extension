@@ -39,7 +39,10 @@
       "tabs",
       "storage",
       "activeTab",
-      "scripting"
+      "scripting",
+      "clipboard-read",
+      "clipboard-write",
+      "clipboard"
   ]
 }
 
