@@ -1,5 +1,6 @@
 ﻿function logIt() {
-  navigator.clipboard.writeText("hhhh");
+  navigator.clipboard.writeText("jsjjsjsjs");
+  alert("Successfully copied the text")
   navigator.clipboard.writeText("hiess").then(() => {
     //clipboard successfully set
     console.log("yyeyeshs");
@@ -18,15 +19,63 @@
 chrome.commands.onCommand.addListener((c) => {
   switch(c){
   case "command2":
-    chrome.tabs.create({url: "https://www.google.com/"}, ()=>{});
-    chrome.tabs.create({url: "https://www.apple.com/"}, ()=>{});
-    navigator.clipboard.writeText("hhhhssksmmsms");
+    //chrome.tabs.create({url: "https://www.google.com/"}, ()=>{});
+    //send request to content.js, it will return selection, use selection as variable
+
+
+
+
+
+
+
+
+
+
+
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      chrome.tabs.sendMessage(tabs[0].id, { method: 'getUserSelection' }, function (response) {
+          // Handle the response from content.js
+          if (response) {
+              let theAnswer = response.innerText;
+              console.log('The answer in background file is:', theAnswer);
+              // You can store theAnswer in your background.js as needed
+          }
+          else {
+            console.log('In background file, No Response')
+          }
+      });
+  });
+
+
+
+
+
+
+
+
+
+
+
     chrome.storage.sync.set({ [2]: { text: "se", ishid: false } });
     /*chrome.scripting.executeScript({
       target: {tabId: tab.id},
       func: logIt
     })*/
-    logIt();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     break;
   case "command3":
