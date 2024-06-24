@@ -1,0 +1,43 @@
+﻿{
+  "name": "CeeP",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "This is CeeP",
+  "commands": {
+    "command2": {
+      "suggested_key": "Ctrl+Shift+2",
+      "description": "This is command2.",
+      "global": true
+    },
+    "command3": {
+      "suggested_key": "Ctrl+Shift+3",
+      "description": "This is command2.",
+      "global": true
+    },
+    "command4": {
+      "suggested_key": "Ctrl+Shift+4",
+      "description": "This is command2.",
+      "global": true
+    },
+    "command5": {
+      "suggested_key": "Ctrl+Shift+5",
+      "description": "This is command2.",
+      "global": true
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "I am Chapter 24",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "Chapter_24_32.png"
+    }
+  },
+  "permissions": [
+      "tabs",
+      "storage"
+  ]
+}
+
