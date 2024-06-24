@@ -7,7 +7,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
       let innerText = "try for test"
       innerText = document.getSelection().toString()
       console.log("In content file, user selects: " + innerText)
-      sendResponse({ innerText: "try maybe" });
+      sendResponse({ innerText: innerText });
   }
 });
 

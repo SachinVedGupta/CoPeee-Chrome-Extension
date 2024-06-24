@@ -36,7 +36,7 @@ chrome.commands.onCommand.addListener((c) => {
       chrome.tabs.sendMessage(tabs[0].id, { method: 'getUserSelection' }, function (response) {
           // Handle the response from content.js
           if (response) {
-              let theAnswer = response.innerText;
+              let theAnswer = response["innerText"];
               console.log('The answer in background file is:', theAnswer);
               // You can store theAnswer in your background.js as needed
           }
