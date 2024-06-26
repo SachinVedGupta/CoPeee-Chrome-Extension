@@ -56,6 +56,26 @@ function renderABox(number, isHidden, theText, isClear) {
   let numBtn = document.getElementById(`num-btn-${uuid}`)
 
 
+  textIdVar.addEventListener("click", function() {
+    let textToCopy = pIdVar.textContent
+    navigator.clipboard.writeText(textToCopy)
+
+    pIdVar.style.transition = "all 0.5s"
+
+
+    pIdVar.textContent = "Copied :)";
+
+    pIdVar.style.opacity = 1
+    
+
+    setTimeout(function() {
+
+      pIdVar.textContent = textToCopy
+
+    }, 1000);
+  })
+
+
   bu.addEventListener("click", function() {
     if (isHidden) {
       console.log("hidden")

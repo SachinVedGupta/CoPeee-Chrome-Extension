@@ -91,6 +91,7 @@ img {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   width: 100%;
+  cursor: pointer;
   
 }
 
@@ -114,6 +115,7 @@ img {
   margin: 0;
   border-radius: 5px;
   width: 100%;
+  cursor: pointer;
   
 }
 
