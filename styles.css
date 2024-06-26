@@ -16,22 +16,16 @@ h2 {
   font-size: 25px;
   width: 35px;
   text-align: center;
-
-  
   margin: 0;
   font-family: Calistoga, Arial;
-
 }
 
 svg {
   height: 23px;
 }
 
-
-
 img {
   height: 100%;
-  
 }
 
 .hide {
@@ -46,14 +40,12 @@ img {
   margin: 0 5px;
   border-radius: 5px;
   justify-content: space-around;
-  
 }
 
 .test {
   display: flex;
   align-items: flex-start;
 }
-
 
 .thin-el {
   display: flex;
@@ -64,7 +56,6 @@ img {
   position: relative;
 }
 
-
 .num {
   margin: 0;
   padding: 0;
@@ -73,16 +64,9 @@ img {
   display: flex;
   border: none;
   border-radius: 5px;
-
-
-
-
 }
 
-
-
 .text-short {
-
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -92,7 +76,6 @@ img {
   border-radius: 5px;
   width: 100%;
   cursor: pointer;
-  
 }
 
 .p-short {
@@ -104,11 +87,9 @@ img {
   white-space: nowrap;
   overflow: hidden; 
   padding-top: 4px;
-  
 }
 
 .text-long {
-
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -116,7 +97,6 @@ img {
   border-radius: 5px;
   width: 100%;
   cursor: pointer;
-  
 }
 
 .p-long {
@@ -131,8 +111,6 @@ img {
   box-sizing: border-box;
   min-height: 35px;
   padding-bottom: 5px;
-  
-  
 }
 
 

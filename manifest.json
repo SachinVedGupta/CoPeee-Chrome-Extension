@@ -1,6 +1,6 @@
 ﻿{
   "name": "CeeP",
-  "version": "1.0",
+  "version": "2.0",
   "manifest_version": 3,
   "description": "This is CeeP",
   "commands": {
@@ -32,7 +32,7 @@
     "default_title": "I am Chapter 24",
     "default_popup": "popup.html",
     "default_icon": {
-      "32": "Chapter_24_32.png"
+      "32": "theicon.png"
     }
   },
   "content_scripts": [

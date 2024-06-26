@@ -1,7 +1,5 @@
 const page = document.getElementById("root")
 
-console.log("st")
-
 function renderABox(number, isHidden, theText, isClear) {
 
   //no parameters
@@ -160,7 +158,7 @@ function renderABox(number, isHidden, theText, isClear) {
 
 
 function createDb() {
-  for (let i = 1; i <= 9; i++) {
+  for (let i = 2; i <= 5; i++) {
     chrome.storage.sync.set({ [i]: { text: "Select Alt+Number to Copy, and Ctrl+Alt+Number to Paste", ishid: false } })
   }
 }
@@ -173,7 +171,6 @@ function renderPage() {
 
   for (let i = 1; i <= 9; i++) {
 
-    
     chrome.storage.sync.get([i.toString()]).then((result) => {
     
       let object = result[i.toString()]
@@ -190,43 +187,7 @@ function renderPage() {
     
     });
 
-
-  
   }
-
-
-
-  /*
-
-  renderABox(1, false, "Refer to database", false)
-
-  // Key is 1
-  // Value: First "false" stored in database under isHidden
-  // Value: Text thats stored/copied
-  
-  // Second "false" when rendering will be based on whether the text in databse is there or if its juist blank with ""
-
-  // Database Structure
-  // 1 --> {text: "Who am I",
-  //        isHidden: false}
-
-
-  //USe built in chrome extension storage
-
-
-
-
-
-  renderABox(2, false, "My name is Sachin and I like to go to the museum to play games and I am so good at everything", false)  
-  renderABox(3, false, "My name is Sachin and I like to go to the museum to play games and I am so good at everything", false)
-  renderABox(4, false, "My name is Sachin and I like to go to the museum to play games and I am so good at everything", false)
-  renderABox(5, false, "My name is Sachin and I like to go to the museum to play games and I am so good at everything", false)
-  renderABox(6, false, "My name is Sachin and I like to go to the museum to play games and I am so good at everything", false)
-  renderABox(7, false, "My name is Sachin and I like to go to the museum to play games and I am so good at everything", false)
-  renderABox(8, false, "My name is Sachin and I like to go to the museum to play games and I am so good at everything", false)
-  renderABox(9, false, "My name is Sachin and I like to go to the museum to play games and I am so good at everything", false)
-
-  */
 
 }
 
