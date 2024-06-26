@@ -64,15 +64,21 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     const theBackgroundColor = computedStyle.backgroundColor
 
     try {
+      /*
       const colorValues = theBackgroundColor.replace(",", "").split("(")[1].split(")")[0]
       const actualColorValues = colorValues.split(" ")
       console.log(actualColorValues)
-      
       // actualColorValues of form = [red-value, green-value, blue-value, opacity-value]
       const newColorValues = toModifyColor(Number(actualColorValues[0].replace(",", "")), Number(actualColorValues[1].replace(",", "")), Number(actualColorValues[2].replace(",", "")))
       console.log("Is this good input: ", [Number(actualColorValues[0].replace(",", "")), Number(actualColorValues[1].replace(",", "")), Number(actualColorValues[2].replace(",", ""))])
       console.log("Is this good output: ", newColorValues)
       const theRealColor = `rgba(${newColorValues[0].toString()}, ${newColorValues[1].toString()}, ${newColorValues[2].toString()}, 1)`
+      console.log("Background color:", theBackgroundColor)
+      console.log("The Real Colour to Use:", theRealColor)
+      chrome.storage.sync.set({ "dbBackgroundColor": theRealColor })
+      */
+
+      const theRealColor = theBackgroundColor
       console.log("Background color:", theBackgroundColor)
       console.log("The Real Colour to Use:", theRealColor)
       chrome.storage.sync.set({ "dbBackgroundColor": theRealColor })

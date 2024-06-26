@@ -102,7 +102,8 @@ function renderPage() {
 
 
 chrome.storage.onChanged.addListener(() => {
-  document.getElementById("root").innerHTML = `<h1>CeeP</h1>`
+  //document.getElementById("root").innerHTML = `<h1>CoPeee</h1>`
+  document.getElementById("root").innerHTML = `<div class="nav-div"><h1>CoPeee</h1><h3>Select Text</h3></div>`
   document.getElementById("root").innerHTML += `<script src="myindex.js"></script>`
   document.getElementById("root").innerHTML += `<script src="thecontent.js"></script>`
 
@@ -124,6 +125,48 @@ chrome.runtime.onInstalled.addListener(function(details){
 
 chrome.commands.onCommand.addListener((command) => {
   console.log(`Command: ${command}`);
+})
+
+let absHelpBox = document.getElementById("help-box-text")
+let firstBox = document.getElementById("first-box-id")
+let smallBoxOne = document.getElementById("small-box-one")
+let smallBoxTwo = document.getElementById("small-box-two")
+let smallBoxThree = document.getElementById("small-box-three")
+
+firstBox.addEventListener("mouseover", function() {
+  absHelpBox.innerHTML = "> Select Text in Webpage <br> >> Ctrl+Shift+(2/3/4/5) <br> >>> Saved in Slot"
+  absHelpBox.opacity = 1;
+})
+firstBox.addEventListener("mouseout", function() {
+  absHelpBox.innerHTML = ""
+  absHelpBox.opacity = 0
+})
+
+smallBoxOne.addEventListener("mouseover", function() {
+  absHelpBox.innerHTML = "> Click Number <br> >> To Clear and Delete It"
+  absHelpBox.opacity = 1
+})
+smallBoxOne.addEventListener("mouseout", function() {
+  absHelpBox.innerHTML = ""
+  absHelpBox.opacity = 0
+})
+
+smallBoxTwo.addEventListener("mouseover", function() {
+  absHelpBox.innerHTML = "> Click Eye <br> >> To toggle hide/unhide"
+  absHelpBox.opacity = 1
+})
+smallBoxTwo.addEventListener("mouseout", function() {
+  absHelpBox.innerHTML = ""
+  absHelpBox.opacity = 0
+})
+
+smallBoxThree.addEventListener("mouseover", function() {
+  absHelpBox.innerHTML = "> Click on the Text <br> >> To Copy it <br> >>> To your Clipboard"
+  absHelpBox.opacity = 1
+})
+smallBoxThree.addEventListener("mouseout", function() {
+  absHelpBox.innerHTML = ""
+  absHelpBox.opacity = 0
 })
 
 
