@@ -73,12 +73,13 @@ function createDb() {
   for (let i = 2; i <= 5; i++) {
     chrome.storage.sync.set({ [i]: { text: "Select Alt+Number to Copy, and Ctrl+Alt+Number to Paste", ishid: false } })
   }
+  chrome.storage.sync.set({ "dbBackgroundColor": "#8DD8AB" })
 }
 
 
 function renderPage() {
 
-  for (let i = 1; i <= 9; i++) {
+  for (let i = 2; i <= 5; i++) {
     chrome.storage.sync.get([i.toString()]).then((result) => {
       let object = result[i.toString()]
       let newText = object["text"]
@@ -92,6 +93,11 @@ function renderPage() {
     
     })
   }
+
+  chrome.storage.sync.get(["dbBackgroundColor"]).then((result) => {
+    console.log("The background color here is: " + result["dbBackgroundColor"])
+    document.body.style.backgroundColor = result["dbBackgroundColor"];
+  })
 }
 
 
@@ -101,6 +107,7 @@ chrome.storage.onChanged.addListener(() => {
   document.getElementById("root").innerHTML += `<script src="thecontent.js"></script>`
 
   renderPage()
+
 })
 
 
