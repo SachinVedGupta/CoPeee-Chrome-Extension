@@ -76,6 +76,7 @@ img {
   border-radius: 5px;
   width: 100%;
   cursor: pointer;
+  transition: all 2s ease;
 }
 
 .p-short {
@@ -87,6 +88,7 @@ img {
   white-space: nowrap;
   overflow: hidden; 
   padding-top: 4px;
+  transition: all 2s ease;
 }
 
 .text-long {
@@ -97,6 +99,7 @@ img {
   border-radius: 5px;
   width: 100%;
   cursor: pointer;
+  transition: all 2s ease;
 }
 
 .p-long {
@@ -111,6 +114,7 @@ img {
   box-sizing: border-box;
   min-height: 35px;
   padding-bottom: 5px;
+  transition: all 2s ease;
 }
 
 
