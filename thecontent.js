@@ -103,7 +103,19 @@ function renderPage() {
 
 chrome.storage.onChanged.addListener(() => {
   //document.getElementById("root").innerHTML = `<h1>CoPeee</h1>`
-  document.getElementById("root").innerHTML = `<div class="nav-div"><h1>CoPeee</h1><h3>Select Text</h3></div>`
+  document.getElementById("root").innerHTML = 
+  `
+  <div class="nav-div">
+    <h1>CoPeee</h1>
+    <div id="help-box-text" class="abs-box"></div>
+    <div class="first-box" id="first-box-id"></div>
+    <div class="second-box">
+      <div class="small-box" id="small-box-one"></div>
+      <div class="small-box" id="small-box-two"></div>
+      <div class="small-box" id="small-box-three"></div>
+    </div>
+  </div>
+  `
   document.getElementById("root").innerHTML += `<script src="myindex.js"></script>`
   document.getElementById("root").innerHTML += `<script src="thecontent.js"></script>`
 
